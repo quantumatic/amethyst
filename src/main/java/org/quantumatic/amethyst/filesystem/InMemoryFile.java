@@ -15,7 +15,7 @@ public class InMemoryFile {
     private final String source;
     private final List<Integer> lineStarts;
 
-    public InMemoryFile(String path, String source, int sourceLength) {
+    public InMemoryFile(String path, String source) {
         this.path = path;
         this.source = source;
         this.lineStarts = Stream.concat(
@@ -26,7 +26,7 @@ public class InMemoryFile {
         ).collect(Collectors.toList());
     }
 
-    public InMemoryFile(String path, String source, int sourceLength, List<Integer> lineStarts) {
+    public InMemoryFile(String path, String source, List<Integer> lineStarts) {
         this.path = path;
         this.source = source;
         this.lineStarts = lineStarts;
